@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti, Mi Amor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #fff0f3;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem;
+        }
+
+        header h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #ffb3c6;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: #ff4777;
+        }
+
+        .contenido {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .tarjeta {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .tarjeta h2 {
+            color: #ff4777;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .pregunta-final {
+            font-size: 2rem;
+            text-align: center;
+            background: #ff758c;
+            color: white;
+            border-radius: 15px;
+            padding: 2rem;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Para el Amor de mi Vida</h1>
+        <p>Hay algo importante que quiero decirte...</p>
+    </header>
+
+    <nav>
+        <a onclick="mostrarSeccion('inicio')">Inicio</a>
+        <a onclick="mostrarSeccion('razones')">Razones</a>
+        <a onclick="mostrarSeccion('pregunta')">La Pregunta</a>
+    </nav>
+
+    <div class="contenido">
+        <div id="inicio" class="tarjeta">
+            <h2>Mi Corazón Te Eligió</h2>
+            <p>Desde el primer momento que te vi, supe que eras especial...</p>
+        </div>
+
+        <div id="razones" class="tarjeta">
+            <h2>Las Razones Por Las Que Me Encantas</h2>
+            <ul>
+                <li>Tu hermosa sonrisa ilumina hasta el día más oscuro</li>
+                <li>La forma en que me miras me hace sentir especial</li>
+                <li>Tu dulzura y bondad hacen que me derrita por dentro</li>
+            </ul>
+        </div>
+
+        <div id="pregunta" class="tarjeta">
+            <div class="pregunta-final">
+                ¿Quieres ser mi novia?
+            </div>
+            <p>Porque quiero compartir contigo cada momento...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Con todo mi amor ❤️</p>
+    </footer>
+
+    <script>
+        function mostrarSeccion(id) {
+            let secciones = document.querySelectorAll('.tarjeta');
+            secciones.forEach(seccion => seccion.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+
+        // Mostrar la sección "Inicio" por defecto
+        mostrarSeccion('inicio');
+    </script>
+</body>
+</html>
